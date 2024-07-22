@@ -1,0 +1,120 @@
+.original {
+  margin-top: var(--contents-margin);
+}
+.original .wrapper {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.original .wrapper.is-single {
+  width: 100%;
+}
+.original .wrapper.is-single .article {
+  margin-top: 5em;
+}
+.original .wrapper.is-single .article-wrapper {
+  justify-content: space-between;
+}
+.original .wrapper .article {
+  margin-top: 5em;
+}
+.original .wrapper .article-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column;
+}
+@media (min-width: 756px) {
+  .original .wrapper .article-wrapper {
+    flex-flow: row;
+  }
+}
+.original .wrapper .article-wrapper .top-article {
+  width: 100%;
+}
+@media (min-width: 756px) {
+  .original .wrapper .article-wrapper .top-article {
+    width: 45%;
+  }
+}
+.original .wrapper .article-wrapper .top-article-wrapper {
+  padding: 2em;
+  background: whitesmoke;
+}
+@media (min-width: 756px) {
+  .original .wrapper .article-wrapper .top-article-wrapper {
+    padding: 5em;
+  }
+}
+.original .wrapper .article-wrapper .top-article-wrapper .image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.original .wrapper .article-wrapper .top-article-wrapper .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.5s;
+}
+.original .wrapper .article-wrapper .top-article-wrapper .image img:hover {
+  transform: scale(1.1);
+}
+.original .wrapper .article-wrapper .top-article-wrapper .text {
+  margin: 2em 0;
+}
+.original .wrapper .article-wrapper .top-article-wrapper .text .title:hover a h3 {
+  color: var(--hover-color);
+}
+.original .wrapper .article-wrapper .top-article-wrapper .text .title a h3 {
+  font-size: var(--main-text);
+  font-weight: bold;
+  transition: all 0.5s;
+}
+.original .wrapper .article-wrapper .top-article-wrapper .text .description {
+  margin-top: 1em;
+}
+.original .wrapper .article-wrapper .top-article-wrapper .text .description p {
+  font-size: var(--description-text);
+  font-weight: bold;
+  color: gray;
+}
+.original .wrapper .article-wrapper .top-article-wrapper .text .date {
+  margin-top: 1em;
+}
+.original .wrapper .article-wrapper .top-article-wrapper .text .date p {
+  font-size: var(--description-text);
+  color: gray;
+}
+.original .wrapper .article-wrapper .article-list {
+  margin-top: 5em;
+  width: 100%;
+}
+@media (min-width: 756px) {
+  .original .wrapper .article-wrapper .article-list {
+    margin-top: 0;
+    width: 45%;
+  }
+}
+.original .wrapper .article-wrapper .article-list ul li {
+  border-bottom: solid 1px var(--main-text-color);
+  padding: 2em 1em;
+}
+.original .wrapper .article-wrapper .article-list ul li:first-child {
+  border-top: solid 1px var(--main-text-color);
+}
+.original .wrapper .article-wrapper .article-list ul li .title:hover a p {
+  color: var(--hover-color);
+  transition: all 0.5s;
+}
+.original .wrapper .article-wrapper .article-list ul li .title a p {
+  font-size: var(--main-text);
+  font-weight: bold;
+}
+.original .wrapper .article-wrapper .article-list ul li .description {
+  margin-top: 0.5em;
+}
+.original .wrapper .article-wrapper .article-list ul li .description p {
+  font-size: var(--description-text);
+  color: gray;
+}/*# sourceMappingURL=original.css.map */

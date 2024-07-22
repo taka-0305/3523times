@@ -1,0 +1,139 @@
+
+$break-point: 756px;
+
+@mixin wrapeer-size(){
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: $break-point) {
+    max-width: 800px;
+  }
+}
+
+main{
+  @include wrapeer-size;
+  margin-top: 10em;
+  color: var(--main-text-color);
+  .article-wrapper{
+    width: 100%;
+    article{
+      padding: 5% 5% 20%;
+      background: var(--background-color);
+      .article-title{
+        margin: 1rem 0;
+        text-align: center;
+        h1{
+          font-size: 2rem;
+          color: var(--main-text-color);
+          font-weight: bold;
+          line-height: 1.5;
+          @media (min-width: $break-point) {
+            font-size: 4rem;
+          }
+        }
+      }
+      .article-date{
+        margin: 1.2rem 0;
+        display: flex;
+        justify-content: end;
+        p{
+          font-size: 1.4rem;
+          color: gray;
+          @media (min-width: $break-point) {
+            font-size: 1.6rem;
+          }
+        }
+      }
+      .context{
+        $reduce : 0.3; //フォントサイズを0.2ずつ源算するための値
+        $fontSize : 2.2 + $reduce;
+        font-size: 1.4rem;
+          @media (min-width: $break-point) {
+            font-size: 1.6rem;
+          }
+        @for $value from 1 through 6 {
+          h#{$value}{ //#{}を使用して見出しセレクタを作成
+          //フォントサイズを再設定
+            $fontSize: $fontSize - $reduce; //0.2ずつ源算
+            font-size: $fontSize + rem;
+            font-weight: bold;
+            line-height: 2.25;
+            margin: 1em 0;
+          }
+        }
+        @media (min-width: $break-point) {
+          $reduce : 0.8;
+          $fontSize : 3.6 + $reduce;
+          @for $value from 1 through 6 {
+            h#{$value}{ //#{}を使用して見出しセレクタを作成
+            //フォントサイズを再設定
+              $fontSize: $fontSize - $reduce; //0.2ずつ源算
+              font-size: $fontSize + rem;
+              font-weight: bold;
+              line-height: 2.25;
+              margin: 1em 0;
+            }
+          }
+        }
+        li{
+          padding: 1rem;
+          line-height: 2.25;
+        }
+        table{
+          font-size: 1.4rem;
+          @media (min-width: $break-point) {
+            font-size: 1.6rem;
+          }
+        }
+        p{
+          font-size: 1.4rem;
+          line-height: 2.25;
+          @media (min-width: $break-point) {
+            font-size: 1.6rem;
+          }
+        }
+        blockquote{
+          background: whitesmoke;
+          padding: 5%;
+        }
+        a{
+          color: var(--hover-color);
+          transition: opacity 0.5s;
+          &:hover{
+            opacity: 0.6;
+          }
+        }
+        img{
+          margin: 3rem 0;
+        }
+      }
+    }
+  }
+}
+
+.single__index {
+  border: 1px solid #d2d2d2;
+  padding: 2.5%;
+  border-radius: 1rem;
+  background-color: whitesmoke;
+  margin: 5rem 0;
+  a{
+    color: var(--main-text-color);
+    font-size: 1.4rem;
+    line-height: 2;
+  }
+  ul,ol {
+    border: none;
+    padding: 0 0 0 1rem;
+  }
+  .index__title{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    .index__button{
+      border: none;
+      color: var(--main-text-color);
+    }
+  }
+}
