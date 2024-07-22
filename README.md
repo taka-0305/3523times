@@ -43,6 +43,8 @@ private $join_category = " LEFT OUTER JOIN category c on m.category_id = c.id";
 ### 検索ページ
 ![検索ページ画像](https://github.com/user-attachments/assets/1c8afe68-f52b-48bf-812d-79985dce4507)
 
+※画像使用については所属事務所に確認し、許可を頂いております。
+
 
 ## 使用技術  
 ![Static Badge](https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white)
